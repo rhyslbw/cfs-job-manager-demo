@@ -4,9 +4,6 @@ Template.main.helpers({
   },
   jobs: function() {
     return FS.JobManager.jobCollection.find();
-  },
-  logMe: function(){
-    console.log(FS.JobManager.jobCollection.findOne())
   }
 });
 
