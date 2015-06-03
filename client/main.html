@@ -1,0 +1,41 @@
+<head>
+    <title>cfs:job-manager demo</title>
+</head>
+<body>
+    {{> main }}
+</body>
+
+<template name="main">
+    <h1>cfs:job-manager demo</h1>
+    <button class="insert-image">Insert 1 Image</button>
+    <button class="remove-images">Remove Images</button>
+    <button class="remove-jobs">Remove Jobs</button>
+    {{#if jobs}}
+        <table>
+            <thead>
+            <tr>
+                <th>Type</th>
+                <th>Status</th>
+                <th>Image ID</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each jobs}}
+                <tr>
+                    <td>{{type}}</td>
+                    <td>{{status}}</td>
+                    <td>{{data.fileId}}</td>
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    {{/if}}
+    {{#if images}}
+        {{#each images}}
+            <h2>Thumb Store</h2>
+            <img src="{{this.url store='thumbStore'}}" />
+            <h2>Full Size Store</h2>
+            <img src="{{this.url store='fullSizeStore'}}" />
+        {{/each}}
+    {{/if}}
+</template>

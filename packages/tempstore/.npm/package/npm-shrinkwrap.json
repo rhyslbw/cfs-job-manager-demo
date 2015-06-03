@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "combined-stream": {
+      "version": "0.0.4",
+      "dependencies": {
+        "delayed-stream": {
+          "version": "0.0.5"
+        }
+      }
+    }
+  }
+}
